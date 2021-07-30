@@ -1,0 +1,67 @@
+md \data\db
+db
+use game-of-thrones
+db.characters.insertOne({name: 'Jon Snow'})
+use game-of-thrones
+2019
+I always use MongoDB as a database when I work on an app. And I like to connect to a database on my computer because it speeds up dev and test-related work.  Today, I want to share how to create and connect to a local MongoDB Database. Installing MongoDB
+You need to install MongoDB on your computer before you can connect to it. You can install MongoDB by following these instructions (Mac and Windows).  Once you have completed the installation process, try typing mongo --version into your command line. You should get a response similar to the following:  mongo --version
+Terminal showing MongoDB Version
+Starting MongoDB
+You can start MongoDB on your computer with the mongod command.  mongod
+Keep the mongod window running when you want to work with your local MongoDB. MongoDB stops when you close the window. Brief overview of how MongoDB works
+MongoDB lets you store things (called documents) inside databases. Each database contains multiple collections.  To make it easier to understand, you can think of MongoDB as a building. It contains many rooms.  Each room is a database. Each database is responsible for storing information about one application. You can store as much information as you want.  You have an unlimited supply of boxes in each room. Each box is a collection. Each collection can only contain one type of data.  For example, one collection can be used for books, one collection for users, one collection for toys, and so on. Adding items to a database
+One way to add items to a MongoDB database is through the Mongo Shell. To open up the Mongo Shell, you open another command line window and run mongo.  mongo
+Note: Make sure you keep the mongod window open! You won’t be able to interact with the Mongo Shell if you close the mongod window.  First, we need a database to work with. You can see the currently selected database with the db command. (By default, you should be on the test database).  > db
+Note: The > in the code above signifies the Mongo Shell. You don’t need to type >. It is not part of the command. Terminal returns 'test' when we run the 'db' command.  For this article, we’ll create a database called game-of-thrones. You can use the use <database> command to create and switch to a new database.  > use game-of-thrones
+Switch to a database named game-of-thrones.  We’re going to add a character into the game-of-thrones. Here, we need to put the character into a collection. We’ll use characters as the name of the collection.  To add an item to a collection, you can pass a JavaScript object into db.<collectionName>.insertOne().  db.characters.insertOne({ name: 'Jon Snow' })
+Added 'Jon Snow' into the 'characters' collection.  Let’s add one character into the database before we continue.  db.characters.insertOne({ name: 'Arya Stark' })
+db.characters.find()
+db.characters.insertOne({name:'Arya Stark'})
+db.characters.find()
+use rest
+db.find()
+db
+db.posts
+db.posts.find()
+db.help
+return
+'hello'
+process.stdout.write('hi!')
+db.hello()
+db
+use rest
+db.posts.find()
+mongod
+exit()
+fancy past
+db
+db.use
+help
+show dbs
+use config
+db.find()
+use rest
+db.posts.find()
+db.posts.insertOne()
+use carpenter
+db
+db.use('watcher')
+db.  s
+use
+db use
+db
+use
+use watcher
+db
+db.get('')
+db.use('carpenter')
+db
+db.use
+db carpenter
+db
+use carpenter
+db
+help
+db.help()
+db.get()
